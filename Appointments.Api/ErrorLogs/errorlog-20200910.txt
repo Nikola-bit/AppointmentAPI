@@ -1,0 +1,681 @@
+2020-09-10T10:00:05.8072510+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:00:05.8634196+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:00:05.9758743+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:01:17.2963013+02:00 80000006-0001-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:01:17.3104361+02:00 80000006-0001-ff00-b63f-84710c7967bb [WRN] The response has already started, the error page middleware will not be executed. (e1dd4c0d)
+2020-09-10T10:01:17.5592661+02:00 80000006-0001-ff00-b63f-84710c7967bb [ERR] Connection ID ""18374686485577203717"", Request ID ""80000006-0001-ff00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-09-10T10:05:13.3676367+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:05:13.4724264+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:05:13.5208028+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:05:56.7859173+02:00 8000000d-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:05:56.7952691+02:00 8000000d-0002-ff00-b63f-84710c7967bb [WRN] The response has already started, the error page middleware will not be executed. (e1dd4c0d)
+2020-09-10T10:05:56.8794869+02:00 8000000d-0002-ff00-b63f-84710c7967bb [ERR] Connection ID ""18374686489872171020"", Request ID ""8000000d-0002-ff00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ExceptionContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-09-10T10:16:08.8888079+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:16:08.9531556+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:16:08.9642701+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:17:07.4573122+02:00 80000004-0001-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:19:00.2698667+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:19:00.2966272+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:19:00.2970013+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:19:21.4232203+02:00 8000000b-0000-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RoleController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:22:57.5664743+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:22:57.5925097+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:22:57.6014104+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:23:54.7221838+02:00 80000006-0001-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: Unable to resolve service for type 'Appointments.Api.Services.IRoleService' while attempting to activate 'Appointments.Api.Controllers.RolesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:31:25.6698426+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:31:25.7843983+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:31:25.7918339+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:35:56.0874658+02:00 80000003-0000-fe00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.UpdateRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 35
+   at Appointments.Api.Controllers.RolesController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RolesController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:36:25.9164264+02:00 80000005-0003-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.UpdateRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 35
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:38:27.9421730+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:38:27.9762746+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:38:27.9911672+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:39:07.7082078+02:00 80000014-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:44:08.2793498+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:44:08.2986836+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:44:08.3046088+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T10:44:29.8921256+02:00 8000000b-0001-fe00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T10:49:31.6945299+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T10:49:31.7496541+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T10:49:31.7613640+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:02:14.3613153+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:02:14.3999124+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:02:14.4100509+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:03:19.3502089+02:00 80000008-0000-fe00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:03:57.9161498+02:00 8000000a-0000-fe00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:04:17.1040648+02:00 8000000d-0001-fe00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:12:49.4413993+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:12:49.4650530+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:12:49.5235089+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:17:01.3946450+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:17:01.4234234+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:17:01.4370977+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:18:44.4621027+02:00 80000020-0002-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at Appointments.Api.Utilities.DataEncryption.Decrypt(String text) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Utilities\DataEncryption.cs:line 44
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:23:10.5888312+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:23:10.7434878+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:23:10.7937686+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:23:29.8151817+02:00 80000002-0002-fd00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Type Map configuration:
+RoleCreateDTO -> Role
+AppointmentsDTO.DTO.RoleCreateDTO -> Appointments.Api.Models.Role
+
+Destination Member:
+RoleId
+
+ ---> System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Number.ParseInt32(ReadOnlySpan`1 value, NumberStyles styles, NumberFormatInfo info)
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , RoleCreateDTO , Role , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.AddRole(RoleCreateDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 25
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleCreateDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:34:14.4627832+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:34:14.5677126+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:34:14.6031639+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:36:17.9764183+02:00 80000011-0001-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=34557; handshake=697; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction()
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Appointments.Api.Data.RoleRepository.AddRole(Role informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Data\RoleRepository.cs:line 22
+   at Appointments.Api.Services.RoleService.AddRole(RoleDTO informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 29
+   at Appointments.Api.Controllers.RoleController.CreateRole(RoleDTO info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 46
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:7a3b853d-08b7-4e39-bd21-0cad59d6e710
+Error Number:-2,State:0,Class:11
+2020-09-10T11:43:55.3675869+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:43:55.4630988+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:43:55.4686094+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:45:07.5131575+02:00 80000017-0000-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+PagedResponse`1 -> PagedResponse`1
+Appointments.Api.Wrappers.PagedResponse`1[[System.Collections.Generic.List`1[[Appointments.Api.Models.Role, Appointments.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> Appointments.Api.Wrappers.PagedResponse`1[[System.Collections.Generic.List`1[[AppointmentsDTO.DTO.RoleDTO, AppointmentsDTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+   at lambda_method(Closure , PagedResponse`1 , PagedResponse`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.ListAllRoles(RolePaginationFilter informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 59
+   at Appointments.Api.Controllers.RoleController.ListAllRoles(RolePaginationFilter info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 101
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T11:50:55.6199554+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:50:55.6561560+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:50:55.6646641+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:53:07.9321299+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T11:53:07.9634665+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T11:53:08.1286264+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T11:54:53.9220078+02:00 80000010-0003-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+PagedResponse`1 -> PagedResponse`1
+Appointments.Api.Wrappers.PagedResponse`1[[System.Collections.Generic.List`1[[Appointments.Api.Models.Role, Appointments.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> Appointments.Api.Wrappers.PagedResponse`1[[System.Collections.Generic.List`1[[AppointmentsDTO.DTO.RoleDTO, AppointmentsDTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]
+   at lambda_method(Closure , PagedResponse`1 , PagedResponse`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at Appointments.Api.Services.RoleService.ListAllRoles(RolePaginationFilter informations) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Services\Class\RoleService.cs:line 59
+   at Appointments.Api.Controllers.RoleController.ListAllRoles(RolePaginationFilter info) in D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api\Controllers\RoleController.cs:line 101
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-10T12:00:42.3803098+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T12:00:42.4280118+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T12:00:42.4452877+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T12:14:00.8826860+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T12:14:00.8980344+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T12:14:00.9119545+02:00  [INF] Content root path: "D:\Programming\SkillUp Course (C#, SQL Server Management, .NET Core)\Portfolio Projects\Appointments API\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T14:35:34.3813575+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T14:35:34.3955429+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T14:35:34.4006097+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\Appointments.Api" (b5d60022)
+2020-09-10T15:40:50.4138163+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-10T15:40:50.4257597+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-10T15:40:50.4304937+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\Appointments.Api" (b5d60022)

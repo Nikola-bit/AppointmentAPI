@@ -1,0 +1,230 @@
+﻿----------------------------------------------------Steve 09/09/2020---------------------------------------------------------------------
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(1, 'BOOKING_INVITATION_STATUS', 'Pending', 'Waiting for user response', GETDATE(),NULL),
+	(2, 'BOOKING_INVITATION_STATUS', 'Accepted', 'User accepted the booking invitation', GETDATE(),NULL),
+	(3, 'BOOKING_INVITATION_STATUS', 'Declined', 'User declined the booking invitation', GETDATE(),NULL)
+
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(10, 'ROOM_ATTRIBUTE', 'Projector', 'The room offers a projector', GETDATE(),NULL),
+	(11, 'ROOM_ATTRIBUTE', 'TV', 'The room offers a TV', GETDATE(),NULL),
+	(12, 'ROOM_ATTRIBUTE', 'Whiteboard', 'The room offers a whiteboard', GETDATE(),NULL)
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Pance 17/09/2020---------------------------------------------------------------------
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(4, 'BOOKING_INVITATION_STATUS', 'Tentative', 'User not sure about his status', GETDATE(),NULL)
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Steve 18/09/2020---------------------------------------------------------------------
+
+GO
+
+CREATE TABLE [dbo].[BookingRecurrence](
+	[RecurrenceId] [int] IDENTITY(1,1) NOT NULL,
+	[BookingId] [int] NOT NULL,
+	[StartTime] [time](7) NULL,
+	[EndTime] [time](7) NULL,
+	[Duration] [int] NULL,
+	[Type] [int] NULL,
+	[Value] [int] NULL,
+	[StartDate] [date] NOT NULL,
+	[EndDate] [date] NULL,
+	[EndAfter] [int] NULL,
+	[NoEndDate] [bit] NULL,
+ CONSTRAINT [PK_BookingRecurrence] PRIMARY KEY CLUSTERED 
+(
+	[RecurrenceId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[BookingRecurrence]  WITH CHECK ADD  CONSTRAINT [FK_BookingRecurrence_Booking] FOREIGN KEY([BookingId])
+REFERENCES [dbo].[Booking] ([BookingId])
+GO
+
+ALTER TABLE [dbo].[BookingRecurrence] CHECK CONSTRAINT [FK_BookingRecurrence_Booking]
+GO
+
+ALTER TABLE [dbo].[BookingRecurrence]  WITH CHECK ADD  CONSTRAINT [FK_BookingRecurrence_PlatformConfiguration] FOREIGN KEY([Type])
+REFERENCES [dbo].[PlatformConfiguration] ([Value])
+GO
+
+ALTER TABLE [dbo].[BookingRecurrence] CHECK CONSTRAINT [FK_BookingRecurrence_PlatformConfiguration]
+GO
+
+
+
+CREATE TABLE [dbo].[BookingRecurrenceDays](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[RecurrenceId] [int] NOT NULL,
+	[Weekday] [int] NOT NULL,
+ CONSTRAINT [PK_BookingRecurrenceDays] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[BookingRecurrenceDays]  WITH CHECK ADD  CONSTRAINT [FK_BookingRecurrenceDays_BookingRecurrence] FOREIGN KEY([RecurrenceId])
+REFERENCES [dbo].[BookingRecurrence] ([RecurrenceId])
+GO
+
+ALTER TABLE [dbo].[BookingRecurrenceDays] CHECK CONSTRAINT [FK_BookingRecurrenceDays_BookingRecurrence]
+GO
+
+ALTER TABLE [dbo].[BookingRecurrenceDays]  WITH CHECK ADD  CONSTRAINT [FK_BookingRecurrenceDays_PlatformConfiguration] FOREIGN KEY([Weekday])
+REFERENCES [dbo].[PlatformConfiguration] ([Value])
+GO
+
+ALTER TABLE [dbo].[BookingRecurrenceDays] CHECK CONSTRAINT [FK_BookingRecurrenceDays_PlatformConfiguration]
+GO
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Pance 18/09/2020---------------------------------------------------------------------
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(111, 'WEEKDAY', 'Monday', 'The day of the booking is monday.', GETDATE(),NULL),
+	(112, 'WEEKDAY', 'Tuesday', 'The day of the booking is tuesday.', GETDATE(),NULL),
+	(113, 'WEEKDAY', 'Wednesday', 'The day of the booking is wednesday.', GETDATE(),NULL),
+	(114, 'WEEKDAY', 'Thursday', 'The day of the booking is thursday.', GETDATE(),NULL),
+	(115, 'WEEKDAY', 'Friday', 'The day of the booking is friday.', GETDATE(),NULL),
+	(116, 'WEEKDAY', 'Saturday', 'The day of the booking is saturday.', GETDATE(),NULL),
+	(117, 'WEEKDAY', 'Sunday', 'The day of the booking is sunday.', GETDATE(),NULL)
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Pance 28/09/2020---------------------------------------------------------------------
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(13, 'ROOM_ATTRIBUTE', 'Air Conditioner', 'The room offers an air conditioner', GETDATE(),NULL),
+	(14, 'ROOM_ATTRIBUTE', 'Personal socket', 'The room offers a socket for every meeting participant.', GETDATE(),NULL)
+-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Pance 01/10/2020---------------------------------------------------------------------
+USE [Appointments]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Reminder](
+	[ReminderId] [int] NOT NULL,
+	[BookingId] [int] NULL,
+	[BookingRecurrenceId] [int] NULL,
+	[TypeId] [int] NOT NULL,
+	[Value] [int] NOT NULL,
+	[IsDone] [bit] NOT NULL,
+	[ReminderDate] [datetime] NULL,
+	[DateCreated] [datetime] NOT NULL,
+ CONSTRAINT [PK_Reminder] PRIMARY KEY CLUSTERED 
+(
+	[ReminderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Reminder]  WITH CHECK ADD  CONSTRAINT [FK_Reminder_Booking] FOREIGN KEY([BookingId])
+REFERENCES [dbo].[Booking] ([BookingId])
+GO
+
+ALTER TABLE [dbo].[Reminder] CHECK CONSTRAINT [FK_Reminder_Booking]
+GO
+
+ALTER TABLE [dbo].[Reminder]  WITH CHECK ADD  CONSTRAINT [FK_Reminder_BookingRecurrence] FOREIGN KEY([BookingRecurrenceId])
+REFERENCES [dbo].[BookingRecurrence] ([RecurrenceId])
+GO
+
+ALTER TABLE [dbo].[Reminder] CHECK CONSTRAINT [FK_Reminder_BookingRecurrence]
+GO
+
+ALTER TABLE [dbo].[Reminder]  WITH CHECK ADD  CONSTRAINT [FK_Reminder_Type] FOREIGN KEY([TypeId])
+REFERENCES [dbo].[PlatformConfiguration] ([Value])
+GO
+
+ALTER TABLE [dbo].[Reminder] CHECK CONSTRAINT [FK_Reminder_Type]
+GO
+
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(105, 'RECURRENCE_TYPE', 'Hourly', 'Not', GETDATE(),NULL),
+	(106, 'RECURRENCE_TYPE', 'Minutly', 'Not', GETDATE(),NULL)
+	-----------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------Pance 02/10/2020---------------------------------------------------------------------
+USE [Appointments]
+GO
+/****** Object:  StoredProcedure [dbo].[CheckReminderByBooking]    Script Date: 02.10.2020 14:05:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[CheckReminderByBooking] @LiveDateConverted datetime, @RecurrenceDate datetime
+AS
+
+SET @LiveDateConverted = DATETIMEFROMPARTS(YEAR(@LiveDateConverted),MONTH(@LiveDateConverted),DAY(@LiveDateConverted),DatePart(HOUR, @LiveDateConverted),DatePart(MINUTE, @LiveDateConverted),0,0)
+SET @RecurrenceDate = DATETIMEFROMPARTS(YEAR(@RecurrenceDate),MONTH(@RecurrenceDate),DAY(@RecurrenceDate),DatePart(HOUR, @RecurrenceDate),DatePart(MINUTE, @RecurrenceDate),0,0)
+IF(@LiveDateConverted != @RecurrenceDate)
+BEGIN
+PRINT 'false'
+END
+ELSE
+BEGIN
+PRINT 'true'
+END
+GO
+/****** Object:  StoredProcedure [dbo].[FindDateByReminder]    Script Date: 02.10.2020 14:05:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[FindDateByReminder] @Type int, @Value int AS
+DECLARE @DateNow datetime = GETDATE()
+
+	IF(@Type = 101)
+	BEGIN
+	SET @DateNow = DATEADD(DAY,@Value,@DateNow)
+	END
+	IF(@Type = 102)
+	BEGIN
+	SET @DateNow = DATEADD(WEEK,@Value,@DateNow)
+	END
+	IF(@Type = 103)
+	BEGIN
+	SET @DateNow = DATEADD(MONTH,@Value,@DateNow)
+	END
+	IF(@Type = 104)
+	BEGIN
+	SET @DateNow = DATEADD(YEAR,@Value,@DateNow)
+	END
+	IF(@Type = 105)
+	BEGIN
+	SET @DateNow = DATEADD(HOUR,@Value,@DateNow)
+	END
+	IF(@Type = 106)
+	BEGIN
+	SET @DateNow = DATEADD(MINUTE,@Value,@DateNow)
+	END
+
+	SELECT @DateNow
+GO
+/****** Object:  StoredProcedure [dbo].[LiveDate]    Script Date: 02.10.2020 14:05:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LiveDate]
+AS
+	DECLARE @LiveDate datetime = GETDATE()
+	SET @LiveDate = DATETIMEFROMPARTS(YEAR(@LiveDate),MONTH(@LiveDate),DAY(@LiveDate),DatePart(HOUR, @LiveDate),DatePart(MINUTE, @LiveDate),0,0)
+	SELECT @LiveDate as 'Date'
+GO
+-----------------------------------------------------------------------------------------------------------------------------------------

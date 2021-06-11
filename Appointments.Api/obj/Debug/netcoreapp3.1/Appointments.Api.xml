@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Appointments.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Appointments.Api.Controllers.BookingController.CreateUpdateBooking(AppointmentsDTO.DTO.BookingDTO)">
+            <summary>
+            Create/Update a booking.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/create/update
+                    {
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "roomId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "userId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "startingDateTime": "2020-09-16T10:33:42.366Z",
+                          "endingDateTime": "2020-09-16T10:33:42.366Z"
+                    }
+            </remarks>
+            <returns>Booking</returns>
+            <response code = "200">Returns the created/updated booking.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.FindBookingByID(System.String)">
+            <summary>
+            Find a booking by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/single
+                    {
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Booking</returns>
+            <response code = "200">Returns the searched booking.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.DeleteByID(System.String)">
+            <summary>
+            Delete a booking.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/delete
+                    {
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Booking</returns>
+            <response code = "200">Returns the deleted booking.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.ListByFilter(AppointmentsDTO.DTO.BookingPaginationFilter)">
+            <summary>
+            List bookings by filter.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/list
+                    {
+                          "roomId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "userId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "locationId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "pageNumber": 1,
+                          "pageSize": 15
+                    }
+            </remarks>
+            <returns>Booking</returns>  
+            <response code = "200">Returns the filtered bookings.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.ListByMonth(AppointmentsDTO.DTO.ListingDTO)">
+            <summary>
+            List all bookings by a period in a room.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/list/period
+                    {
+                          "date": "2020-09-16T10:37:58.738Z",
+                          "roomId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "type": "Weekly",
+                    }
+            </remarks>
+            <returns>Booking</returns>
+            <response code = "200">Returns the searched bookings.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.FindRoom(System.DateTime,System.DateTime,System.String)">
+            <summary>
+            Find a free room in specific time.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/find/room
+                    {
+                          "startingDateTime": "2020-09-16T10:37:58.738Z",
+                          "endingDateTime": "2020-09-16T12:37:58.738Z",
+                    }
+            </remarks>
+            <returns>Booking</returns>
+            <response code = "200">Returns the free rooms in the inserted time span.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.CreateReminder(AppointmentsDTO.DTO.ReminderCreateByBookingDTO)">
+            <summary>
+            Create a new Reminder
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/reminder/create/byBooking
+                    {
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "typeId": "NkfIeIy8+DHe9khIuWpyBg==",
+                          "value": 1
+                    }
+            </remarks>
+            <param name="create"></param>
+            <returns>Reminder</returns>
+            <response code = "200">Returns the created reminder</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.CreateRr(AppointmentsDTO.DTO.ReminderCreateByRecurrenceDTO)">
+            <summary>
+            Create a new Reminder
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/reminder/create/byRecurrence
+                    {
+                          "bookingRecurrenceId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "typeId": "NkfIeIy8+DHe9khIuWpyBg==",
+                          "value": 1
+                    }
+            </remarks>
+            <param name="create"></param>
+            <returns>Reminder</returns>
+            <response code = "200">Returns the created reminder</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.FindReminderR(System.String)">
+            <summary>
+            Find a reminder by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/reminder/single/byRecurrence
+                    {
+                          "reminderId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Reminder</returns>
+            <response code = "200">Returns the searched reminder.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.FindReminderB(System.String)">
+            <summary>
+            Find a reminder by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/reminder/single/byBooking
+                    {
+                          "reminderId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Reminder</returns>
+            <response code = "200">Returns the searched reminder.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.RemoveCity(System.String)">
+            <summary>
+            Remove a reminder by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET booking/reminder/remove
+                    {
+                          "reminderId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Reminder</returns>
+            <response code = "200">Returns if the reminder is deleted.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.ListByBooking(AppointmentsDTO.DTO.ReminderPaginationFilter)">
+            <summary>
+            List reminders by filter.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/reminder/list/byBooking
+                    {
+                          "BookingId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "BookingRecurrenceId": "string", (Not needed)
+                          "TypeId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "IsDone": true
+                    }
+            </remarks>
+            <returns>List of reminders</returns>
+            <response code = "200">Returns a list of the filtered reminders.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingController.ListByRecurrence(AppointmentsDTO.DTO.ReminderPaginationFilter)">
+            <summary>
+            List reminders by filter.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST booking/reminder/list/byRecurrence
+                    {
+                          "BookingId": "string", (Not needed)
+                          "BookingRecurrenceId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "TypeId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "IsDone": true
+                    }
+            </remarks>
+            <returns>List of reminders</returns>
+            <response code = "200">Returns a list of the filtered reminders.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingParticipantController.CreateParticipant(AppointmentsDTO.DTO.BookingParticipantsDTO)">
+            <summary>
+            Create/Update a participant.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST bookingParticipant/create/update
+                    {
+                          "participantId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "invitationStatusId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "firstName": "Peter",
+                          "lastName": "Johnson",
+                          "email": "peter.johnson@mail.com"
+                    }
+            </remarks>
+            <returns>Participant</returns>
+            <response code = "200">Returns the created/updated participnat.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingParticipantController.FindParticipantByID(System.String)">
+            <summary>
+            Find a participant by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET bookingParticipant/single
+                    {
+                          "participantId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Participant</returns>
+            <response code = "200">Returns the specific participant.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingParticipantController.DeleteParticipant(System.String)">
+            <summary>
+            Delete a participant.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET bookingParticipant/delete
+                    {
+                          "participantId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Participant</returns>
+            <response code = "200">Returns the deleted participant.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingParticipantController.ListAllParticipants(AppointmentsDTO.DTO.ParticipantPaginationFilter)">
+            <summary>
+            List participants by filter.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET bookingParticipant/list
+                    {
+                          "bookingId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "invitationStatusId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "pageNumber": 1,
+                          "pageSize": 15
+                    }
+            </remarks>
+            <returns>Participant</returns>
+            <response code = "200">Returns the filtered participants.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceController.CreateARecurrence(AppointmentsDTO.BookingRecurrenceCreateDTO)">
+            <summary>
+            Create a booking recurrence.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST bookingRecurrence/create
+                    {
+                          "recurrenceId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "userId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "roomId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "startTime": "07:30:00",
+                          "endTime": "07:30:00",
+                          "startDate": "2020-09-16",
+                          "endDate": "2020-10-16", (If from date to date)
+                          "endAfter" : 30, (If by number of meetings)
+                          "NoEndDate" : true (If not known until when)
+                          "bookingRecurrenceDays" :
+                          {
+                                {
+                                    "Weekday" : "I14kpXunkSuJIU+8++5v3Q=="
+                                },
+                                {
+                                    "Weekday" : "I14kpXunkSuJIU+8++5v3Q=="
+                                }
+                          }
+                    }
+            </remarks>
+            <returns>BookingRecurrence</returns>
+            <response code = "200">Returns the created booking recurrence.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceController.GetBookingRecurrence(System.String)">
+            <summary>
+            Find a booking recurrence.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET bookingRecurrence/single
+                    {
+                          "recurrenceId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                    }
+            </remarks>
+            <returns>BookingRecurrence</returns>
+            <response code = "200">Returns the searched booking recurrence.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceController.DeleteBookingRecurrence(System.String)">
+            <summary>
+            Delete a booking recurrence.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET bookingRecurrence/delete
+                    {
+                          "recurrenceId": "I14kpXunkSuJIU+8++5v3Q==",
+                    }
+            </remarks>
+            <returns>BookingRecurrence</returns>
+            <response code = "200">Returns the deleted booking recurrence.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceController.ListBookingRecurrences(AppointmentsDTO.RecurrencePaginationFilter)">
+            <summary>
+            List booking recurrences.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST bookingRecurrence/list
+                    {
+                          "roomId" : "I14kpXunkSuJIU+8++5v3Q==",
+                          "pageNumber": 1,
+                          "pageSize": 15
+                    }
+            </remarks>
+            <returns>BookingRecurrence</returns>
+            <response code = "200">Returns the filtered booking recurrence.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceDaysController.GetAllB(AppointmentsDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All BookingRecurrenceDays
+            </summary>
+            <returns>All BookingRecurrenceDays</returns>
+            <response code = "200">Return all BookingRecurrenceDays</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceDaysController.GetDById(System.String)">
+            <summary>
+            Get BookingRecurrenceDays By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Booking/Recurrence/Days
+                {
+                    "Id" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single BookingRecurrenceDays</returns>
+            <response code = "200">Return BookingRecurrenceDays by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceDaysController.AddUpdate(AppointmentsDTO.DTO.BookingRecurrenceDaysDTO)">
+            <summary>
+            Create a new Booking Recurrence Day
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Booking Recurrence Day
+                    {
+                          "Id": "I14kpXunkSuJIU+8++5v3Q==",
+                          "RecurrenceId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "Weekly" : I14kpXunkSuJIU+8++5v3Q==
+                    }
+            </remarks>
+            <param name="bookDCreate"></param>
+            <returns>Updated list of Booking Recurrence Day</returns>
+            <response code = "200">Return updated list of Booking Recurrence Day</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.BookingRecurrenceDaysController.RemoveRoom(System.String)">
+            <summary>
+            Remove BookingRecurrenceDays by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/BookingRecurrenceDays
+                {
+                    "Id" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single BookingRecurrenceDays</returns>
+            <response code = "200">Return single BookingRecurrenceDays</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.CityController.GetAllCities(AppointmentsDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Cities
+            </summary>
+            <returns>All Cities</returns>
+            <response code = "200">Return all Cities</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:Appointments.Api.Controllers.CityController.GetCityById(System.String)">
+            <summary>
+            Get City By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/City
+                {
+                    "cityId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single City</returns>
+            <response code = "200">Return City by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.CityController.CreateCity(AppointmentsDTO.DTO.CityDTO)">
+            <summary>
+            Create a new City
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Update/City
+                    {
+                          "CityId" : "OqbI1toilNgCe9GJnppPug==",
+                          "Name": "Skopje"
+                    }
+            </remarks>
+            <param name="cityCreate"></param>
+            <returns>Updated list of Cities</returns>
+            <response code = "200">Return updated list of cities</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.CityController.RemoveCity(System.String)">
+            <summary>
+            Remove City by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/City
+                {
+                    "CityId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single City</returns>
+            <response code = "200">Return single City</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LocationController.GetAllLocations(AppointmentsDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Locations
+            </summary>
+            <returns>All Locations</returns>
+            <response code = "200">Return all Locations</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:Appointments.Api.Controllers.LocationController.GetLocationById(System.String)">
+            <summary>
+            Get Location By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/Location
+                {
+                    "LocationId" : "OqbI1toilNgCe9GJnppPug=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Location</returns>
+            <response code = "200">Return Location by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LocationController.Addlocation(AppointmentsDTO.DTO.LocationDTO)">
+            <summary>
+            Create a new Location
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Update/Location
+                    {
+                          "LocationId" : "OqbI1toilNgCe9GJnppPug==",
+                          "CityId" : "OqbI1toilNgCe9GJnppPug==",
+                          "Name": "Location1",
+                          "Adress" : "Kosturska5"
+                    }
+            </remarks>
+            <param name="locationCreate"></param>
+            <returns>Updated list of Locations</returns>
+            <response code = "200">Return updated list of locations</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LocationController.RemoveLocationv(System.String)">
+            <summary>
+            Remove Location by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/Location
+                {
+                    "LocationId" : "OqbI1toilNgCe9GJnppPug=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Location</returns>
+            <response code = "200">Return single Location</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LocationController.FindByCity(System.String)">
+            <summary>
+            Find locations in a city.
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET location/find/byCity
+                {
+                    "cityId" : "OqbI1toilNgCe9GJnppPug=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Location</returns>
+            <response code = "200">Returns all the locations in the city.</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LookUpController.GetInvitationStatuses">
+            <summary>
+            Get booking invitation statuses. 
+            </summary>
+            <returns>LookUp</returns>
+            <response code = "200">Returns all booking invitation statuses.</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LookUpController.GetRoomAttributes">
+            <summary>
+            Get room attributes.
+            </summary>
+            <returns>LookUp</returns>
+            <response code = "200">Returns all room attributes.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LookUpController.GetType">
+            <summary>
+            Get recurrence type.
+            </summary>
+            <returns>LookUp</returns>
+            <response code = "200">Returns all recurrence type.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.LookUpController.GetWeekdays">
+            <summary>
+            Get weekdays.
+            </summary>
+            <returns>LookUp</returns>
+            <response code = "200">Returns all weekdays.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoleController.CreateRole(AppointmentsDTO.DTO.RoleDTO)">
+            <summary>
+            Create/Update a role.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST role/create/update
+                    {
+                          "roleId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "name": "Administrator",
+                          "isActive": true
+                    }
+            </remarks>
+            <returns>Role</returns>
+            <response code = "200">Returns the created/updated role.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoleController.FindRoleByID(System.String)">
+            <summary>
+            Find a role by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET role/single
+                    {
+                          "roleId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Role</returns>
+            <response code = "200">Returns the specific role.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoleController.DeleteRole(System.String)">
+            <summary>
+            Delete a role.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET role/delete
+                    {
+                          "roleId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Role</returns>
+            <response code = "200">Returns the deleted role.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoleController.ListAllRoles(AppointmentsDTO.DTO.RolePaginationFilter)">
+            <summary>
+            List filtered roles.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST role/list
+                    {
+                          "isActive": true,
+                          "pageNumber": 1,
+                          "pageSize": 15
+                    }
+            </remarks>
+            <returns>Role</returns>
+            <response code = "200">Returns the filtered roles.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomAtributeController.GetAllRoomsAtribute(AppointmentsDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All RoomsAtribute
+            </summary>
+            <returns>All RoomsAtribute</returns>
+            <response code = "200">Return all RoomsAtibute</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomAtributeController.GetRoomAtributeById(System.String)">
+            <summary>
+            Get RoomAtribute By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET /single/RoomAtribute
+                {
+                    "roomAtributeId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single RoomAtribute</returns>
+            <response code = "200">Return RoomAtribute by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomAtributeController.AddRoomAtribute(AppointmentsDTO.DTO.RoomAtributeDTO)">
+            <summary>
+            Create a new RoomAtribute
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /create/Update/RoomAtribute
+                    {
+                          "roomId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "atributeId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <param name="roomAtributeCreate"></param>
+            <returns>Updated list of RoomAtribute</returns>
+            <response code = "200">Return updated list of RoomAtribute</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomAtributeController.RemoveRoomAtribute(System.String)">
+            <summary>
+            Remove RoomAtribute by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete /single/RoomAtribute
+                {
+                    "RoomAtributeId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single RoomAtribute</returns>
+            <response code = "200">Return single RoomAtribute</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.GetAllRooms(AppointmentsDTO.Filters.PaginationFilter)">
+            <summary>
+            Get All Rooms
+            </summary>
+            <returns>All Rooms</returns>
+            <response code = "200">Return all Rooms</response>
+            <response code = "400">Some error occured</response>
+            
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.GetRoomById(System.String)">
+            <summary>
+            Get Room By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET room/single
+                {
+                    "roomId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Room</returns>
+            <response code = "200">Return Room by Id</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.AddRoom(AppointmentsDTO.DTO.RoomDTO)">
+            <summary>
+            Create a new Room
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST room/create
+                    {
+                          "Name": "Room1",
+                          "locationId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "Capacity" : 12,
+                          "isUsable" ; 1
+                    }
+            </remarks>
+            <param name="roomCreate"></param>
+            <returns>Updated list of Rooms</returns>
+            <response code = "200">Return updated list of Rooms</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.RemoveRoom(System.String)">
+            <summary>
+            Remove Room by Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                Delete room/remove
+                {
+                    "RoomId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Room</returns>
+            <response code = "200">Return single Room</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.GetRoomByIdWithAttribute(System.String)">
+            <summary>
+            Get Room By Id
+            </summary>
+            <remarks>
+            
+            Sample request:
+            
+                GET room/single
+                {
+                    "roomId" : "I14kpXunkSuJIU+8++5v3Q=="
+                }
+            </remarks>
+            <param name="id"></param>
+            <returns>Single Room</returns>
+            <response code = "200">Return room by ID with its attributes.</response>
+            <response code = "400">Some error occured</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.FindRoomByCapacity(System.Int32)">
+            <summary>
+            Find a room by capacity.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET room/find/byCapacity
+                    {
+                          "capacity": "20",
+                    }
+            </remarks>
+            <returns>Room</returns>
+            <response code = "200">Returns the rooms with the needed capacity.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.RoomController.FindRoomsByFilter(AppointmentsDTO.DTO.FilterDTO)">
+            <summary>
+            Find a room by an attribute.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET room/find/byAttribute
+                    {
+                          "attributeId": "I14kpXunkSuJIU+8++5v3Q==",
+                    }
+            </remarks>
+            <returns>Room</returns>
+            <response code = "200">Returns the rooms with the needed capacity.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.UserController.CreateUser(AppointmentsDTO.DTO.UserDTO)">
+            <summary>
+            Create/Update an user.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST user/create/update
+                    {
+                          "userId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "roleId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "firstName": "Peter",
+                          "lastName": "Johnson",
+                          "email": "peter.johnson@mail.com",
+                          "password": "123456789",
+                          "gender": "Male"
+                    }
+            </remarks>
+            <returns>User</returns>
+            <response code = "200">Returns the created/updated user.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.UserController.FindUserByID(System.String)">
+            <summary>
+            Find an user by ID.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /user/single
+                    {
+                          "userId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>User</returns>
+            <response code = "200">Returns the searched user.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.UserController.DeleteUser(System.String)">
+            <summary>
+            Delete an user.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /user/delete
+                    {
+                          "userId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>User</returns>
+            <response code = "200">Returns the deleted user.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.UserController.ListAllUsers(AppointmentsDTO.DTO.UserPaginationFilter)">
+            <summary>
+            List filtered users.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST user/list
+                    {
+                          "roleId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "firstName": "Peter",
+                          "lastName": "Johnson",
+                          "gender": "Male",
+                          "pageNumber": "1",
+                          "pageSize": "15"
+                    }
+            </remarks>
+            <returns>User</returns>
+            <response code = "200">Returns the filtered users.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:Appointments.Api.Controllers.UserController.Login(AppointmentsDTO.DTO.UserLogin)">
+            <summary>
+            Log in for token.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST user/login
+                    {
+                          "email": "peter.johnson@mail.com",
+                          "password": "123456789"
+                    }
+            </remarks>
+            <returns>User</returns>
+            <response code = "200">Returns the logged user with the token.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+    </members>
+</doc>

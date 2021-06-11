@@ -1,0 +1,6 @@
+2020-09-18T13:44:03.2749197+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-18T13:44:03.3298897+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-18T13:44:03.3343785+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\Appointments.Api" (b5d60022)
+2020-09-18T13:54:30.6885813+02:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-09-18T13:54:30.7115812+02:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-09-18T13:54:30.7147525+02:00  [INF] Content root path: "D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\Appointments.Api" (b5d60022)

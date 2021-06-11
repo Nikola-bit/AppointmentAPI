@@ -1,0 +1,9 @@
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\bin\Debug\netcoreapp3.1\AppointmentsDTO.deps.json
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\bin\Debug\netcoreapp3.1\AppointmentsDTO.dll
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\bin\Debug\netcoreapp3.1\AppointmentsDTO.pdb
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.csprojAssemblyReference.cache
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.AssemblyInfoInputs.cache
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.AssemblyInfo.cs
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.csproj.CoreCompileInputs.cache
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.dll
+D:\BackEndDeveloping\BlaSoft-Practice\ApoitmentsAPI\appointments-api\AppointmentsDTO\obj\Debug\netcoreapp3.1\AppointmentsDTO.pdb
